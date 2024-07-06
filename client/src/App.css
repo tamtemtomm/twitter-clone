@@ -1,0 +1,20 @@
+:root{
+  --color-1: #000000;
+  --color-2: #1d9bf0;
+  --color-3: #ffffff;
+  --color-border:#504d4d;
+}
+
+html{
+  background-color: var(--color-1);
+  font-family: Arial, Helvetica;
+  color: var(--color-3)
+}
+
+*{
+  border: 0;
+  padding: 0;
+  border : 0;
+  margin: 0;
+}
+
