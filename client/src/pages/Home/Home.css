@@ -30,15 +30,6 @@
   cursor: pointer;
 }
 
-.navbar-menu-svg-container{
-  display: flex;
-  width: 4rem;
-}
-
-.navbar-menu-svg-container img{
-  width: 100%;
-}
-
 .post-button{
   height: 3.3rem;
   width: 80%;

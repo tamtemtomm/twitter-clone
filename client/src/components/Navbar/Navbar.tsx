@@ -1,8 +1,12 @@
 import React from 'react'
 import {NavbarMenu, menuList} from './NavbarMenu'
-import otherIcon from "../../assets/bars-solid.svg";
+import otherIcon from "../../assets/svg/bars-solid.svg";
 
-const Navbar = (props:any) => {
+interface UserType{
+  user: any;
+}
+
+const Navbar = (props: UserType) => {
   return (
     <main className="navbar-container">
         {menuList?.map((menu) => (

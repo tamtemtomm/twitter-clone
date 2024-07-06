@@ -18,3 +18,16 @@ html{
   margin: 0;
 }
 
+.svg-container{
+  width: 100%;
+}
+
+.svg-container img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.hover-click:hover{
+  cursor: pointer;
+}
+

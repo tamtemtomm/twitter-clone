@@ -1,0 +1,85 @@
+.main-container {
+  display: flex;
+}
+
+.timeline-mode-container {
+  display: grid;
+  height: 3.2rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+  border: 0.1px solid var(--color-border);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.timeline-create-post-container {
+  display: flex;
+  height: 5rem;
+  padding: 1rem;
+  padding-bottom: 2.4rem;
+  border: 0.1px solid var(--color-border);
+}
+
+.timeline-profile-picture-container {
+  width: 3rem;
+  display: flex;
+  align-items: start;
+  justify-items: center;
+}
+
+.timeline-profile-picture-container img {
+  object-fit: contain;
+  width: 90%;
+  border-radius: 4rem;
+}
+
+.timeline-create-post {
+  width: 100%;
+  height: 50%;
+}
+
+.timeline-create-post textarea {
+  background-color: var(--color-1);
+  width: 95%;
+  height: 100%;
+  margin: 0.5rem;
+  font-family: Helvetica;
+  font-size: 1.3rem;
+  color: var(--color-3);
+  resize: none;
+  outline: none;
+}
+
+.timeline-create-post textarea::placeholder {
+  font-size: 1.3rem;
+  font-family: Helvetica;
+}
+
+.timeline-create-post textarea:focus {
+  border-bottom: 0.1px solid var(--color-2);
+}
+
+.timeline-post-function-container {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin: .5rem 0;
+}
+
+.timeline-post-function {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.4rem;
+  padding-left: 0.2rem;
+}
+
+.timeline-post-function-container button{
+  background-color: var(--color-2);
+  color: white;
+  font-weight: bolder;
+  padding: .6rem 1.1rem;
+  border-radius: 2rem;
+}

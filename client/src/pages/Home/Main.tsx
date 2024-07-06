@@ -1,9 +1,12 @@
 import React from "react";
+import Timeline from "./Timeline";
+
+
 
 const Main = () => {
   return (
     <main className="main-container">
-      <section className="timeline-container"></section>
+      <Timeline/>
       <section className="explore-container"></section>
     </main>
   );

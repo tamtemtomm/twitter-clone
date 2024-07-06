@@ -1,11 +1,13 @@
-import XLogo from "../../assets/x-logo.png"
-import HouseIcon from "../../assets/house-solid.svg";
-import SearchIcon from "../../assets/magnifying-glass-solid.svg";
-import NotificationIcon from "../../assets/bell-solid.svg";
-import EmailIcon from "../../assets/envelope-regular.svg";
-import PeopleIcon from "../../assets/users-solid.svg";
-import UserIcon from "../../assets/user-solid.svg";
-import OtherIcon from "../../assets/bars-solid.svg"
+import Icon from "../Icon";
+
+import XLogo from "../../assets/x-logo.png";
+import HouseIcon from "../../assets/svg/house-solid.svg";
+import SearchIcon from "../../assets/svg/magnifying-glass-solid.svg";
+import NotificationIcon from "../../assets/svg/bell-solid.svg";
+import EmailIcon from "../../assets/svg/envelope-regular.svg";
+import PeopleIcon from "../../assets/svg/users-solid.svg";
+import UserIcon from "../../assets/svg/user-solid.svg";
+import OtherIcon from "../../assets/svg/bars-solid.svg";
 
 export const menuList = [
   { icon: XLogo, scale: "0.4", text: "" },
@@ -28,13 +30,7 @@ interface NavbarMenuProps {
 export const NavbarMenu = (props: NavbarMenuProps) => {
   return (
     <div className="navbar-menu-container">
-      <div className="navbar-menu-svg-container">
-        <img
-          src={props.element}
-          alt={props.text}
-          style={{ scale: props.scale, float: "left", fill: "white" }}
-        />
-      </div>
+      <Icon {...props} width="4rem" />
       <h3>{props.text}</h3>
     </div>
   );

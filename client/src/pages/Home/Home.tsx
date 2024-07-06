@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-// import XLogo from "../../assets/x-logo.png";
-import Navbar from "./Navbar";
+
+import Navbar from "../../components/Navbar/Navbar";
 import Main from "./Main";
 import profilePicture from "../../assets/account-profile-test.jpg";
 
