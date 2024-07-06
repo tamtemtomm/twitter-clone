@@ -2,7 +2,6 @@ import React from "react";
 import Timeline from "./Timeline";
 
 
-
 const Main = () => {
   return (
     <main className="main-container">

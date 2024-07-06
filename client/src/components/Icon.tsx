@@ -10,7 +10,7 @@ interface IconType{
 
 const Icon = (props: IconType) => {
   return (
-    <div className='svg-container' style={{width: props.width}}>
+    <div className='svg-container hover-click' style={{width: props.width}}>
         <img
           src={props.element}
           alt={props.text}

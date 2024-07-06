@@ -1,6 +1,10 @@
 import React from "react";
 import "./Timeline.css";
+
 import Icon from "../../components/Icon";
+import ProfilePicture from "../../components/ProfilePicture";
+import Post from "../../components/Post/Post";
+
 import mediaIcon from "../../assets/svg/photo-film-solid.svg";
 import profilePicture from "../../assets/account-profile-test.jpg";
 
@@ -17,19 +21,21 @@ const Timeline = () => {
   return (
     <section className="timeline-container">
       <div className="timeline-mode-container">
-        <div className="timeline-for-you">For you</div>
-        <div className="timeline-following">Following</div>
+        <div className="timeline-for-you hover-click">For you</div>
+        <div className="timeline-following hover-click">Following</div>
       </div>
       <div className="timeline-create-post-container">
-        <div className="timeline-profile-picture-container">
-          <img src={profilePicture} alt="" />
-        </div>
+        <ProfilePicture
+          profilePicture={profilePicture}
+          width="2.8rem"
+          text="Profile"
+        />
         <div className="timeline-create-post">
           <textarea
             name=""
             id=""
             className="timeline-post-text"
-            placeholder="What is Happening?!"
+            placeholder="What is happening?!"
           ></textarea>
           <div className="timeline-post-function-container">
             <div className="timeline-post-function">
@@ -40,6 +46,9 @@ const Timeline = () => {
             <button className="hover-click">Post</button>
           </div>
         </div>
+      </div>
+      <div className="post-container">
+        <Post />
       </div>
     </section>
   );

@@ -3,6 +3,7 @@
   --color-2: #1d9bf0;
   --color-3: #ffffff;
   --color-border:#504d4d;
+  --color-grey: rgb(92, 80, 80)
 }
 
 html{
@@ -31,3 +32,14 @@ html{
   cursor: pointer;
 }
 
+.profile-picture-container {
+  display: flex;
+  align-items: start;
+  justify-items: center;
+}
+
+.profile-picture-container img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 50%;
+}

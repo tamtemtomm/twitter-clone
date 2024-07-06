@@ -1,0 +1,29 @@
+.post{
+    display: flex;
+    flex-direction: row;
+    gap: .7rem;
+    padding: 1rem 1rem .5rem 1rem;
+    font-family: Helvetica;
+    font-size: 1rem;
+}
+
+.post-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    line-height: 1.4rem;
+}
+
+.post-profile-account{
+    display: flex;
+    gap: .3rem;
+}
+
+.post-profile-account p{
+    color : var(--color-grey)
+}
+
+.post-tweet{
+    font-size: .9rem;
+}
