@@ -1,37 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-:root{
+:root {
   --color-1: #000000;
   --color-2: #1d9bf0;
   --color-3: #ffffff;
-  --color-border:#504d4d;
+  --color-border: #504d4d;
   --color-gray: #202327;
-  --color-gray-text: #71767B;
+  --color-gray-text: #71767b;
 }
 
-html{
+html {
   background-color: var(--color-1);
-  font-family: 'inter';
-  color: var(--color-3)
+  font-family: "inter";
+  color: var(--color-3);
 }
 
-*{
+* {
   border: 0;
   padding: 0;
-  border : 0;
+  border: 0;
   margin: 0;
 }
 
-.svg-container{
+.svg-container {
   width: 100%;
 }
 
-.svg-container img{
+.svg-container img {
   width: 100%;
   object-fit: contain;
 }
 
-.hover-click:hover{
+.hover-click:hover {
   cursor: pointer;
 }
 

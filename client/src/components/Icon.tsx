@@ -1,4 +1,3 @@
-import React from 'react'
 import "./../App.css"
 
 export interface IconType{
@@ -14,7 +13,7 @@ const Icon = (props: IconType) => {
         <img
           src={props.element}
           alt={props.text}
-          style={{ scale: props.scale, float: "left", fill: "white" }}
+          style={{ scale: props.scale, float: "left"}}
         />
     </div>
   )

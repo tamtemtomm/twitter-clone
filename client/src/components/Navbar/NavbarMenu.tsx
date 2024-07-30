@@ -10,15 +10,15 @@ import UserIcon from "../../assets/svg/user-solid.svg";
 import OtherIcon from "../../assets/svg/bars-solid.svg";
 
 export const menuList = [
-  { icon: XLogo, scale: "0.4", text: "" },
-  { icon: HouseIcon, scale: "0.35", text: "Home" },
-  { icon: SearchIcon, scale: "0.35", text: "Explore" },
-  { icon: NotificationIcon, scale: "0.35", text: "Notification" },
-  { icon: EmailIcon, scale: "0.4", text: "Messages" },
-  { icon: EmailIcon, scale: "0.4", text: "Grok" },
-  { icon: PeopleIcon, scale: "0.4", text: "Communities" },
-  { icon: UserIcon, scale: "0.3", text: "Profile" },
-  { icon: OtherIcon, scale: "0.3", text: "More" },
+  { element: XLogo, scale: "0.4", text: "" },
+  { element: HouseIcon, scale: "0.35", text: "Home" },
+  { element: SearchIcon, scale: "0.35", text: "Explore" },
+  { element: NotificationIcon, scale: "0.35", text: "Notifications" },
+  { element: EmailIcon, scale: "0.4", text: "Messages" },
+  { element: EmailIcon, scale: "0.4", text: "Grok" },
+  { element: PeopleIcon, scale: "0.4", text: "Communities" },
+  { element: UserIcon, scale: "0.3", text: "Profile" },
+  { element: OtherIcon, scale: "0.3", text: "More" },
 ];
 
 interface NavbarMenuProps {
@@ -31,7 +31,7 @@ export const NavbarMenu = (props: NavbarMenuProps) => {
   return (
     <div className="navbar-menu-container">
       <Icon {...props} width="4rem" />
-      <h3>{props.text}</h3>
+      <h3 style={{fontWeight:"300", fontSize: "1.25rem"}}>{props.text}</h3>
     </div>
   );
 };

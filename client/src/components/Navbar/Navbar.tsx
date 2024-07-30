@@ -16,7 +16,7 @@ const Navbar = (props: UserType) => {
   return (
     <main className="navbar-container">
       {menuList?.map((menu) => (
-        <NavbarMenu element={menu.icon} scale={menu.scale} text={menu.text} />
+        <NavbarMenu element={menu.element} scale={menu.scale} text={menu.text} />
       ))}
       <button className="post-button hover-click">Post</button>
       <div className="navbar-profile-container">
@@ -27,7 +27,7 @@ const Navbar = (props: UserType) => {
         />
         <div className="navbar-profile-text-container">
           <h3 className="navbar-profile-username">{props.user.username}</h3>
-          <h3 className="navbar-profile-tag">@{props.user.tag}</h3>
+          <h3 className="navbar-profile-tag" style={{fontWeight: "200"}}>@{props.user.tag}</h3>
         </div>
 
         <Icon element={otherIcon} width="2rem" scale=".7" text="other" />

@@ -1,5 +1,6 @@
 import "./Explore.css";
 import Icon from "../../components/Icon";
+import Trend from "../../components/Trend/Trend";
 import SearchIcon from "../../assets/svg/magnifying-glass-solid.svg";
 
 const Explore = () => {
@@ -14,6 +15,15 @@ const Explore = () => {
         ></Icon>
         Search
       </div>
+      <div className="subscribe-container">
+        <h1>Subscribe to Premium</h1>
+        <p>
+          Subscribe to unlock new features and if eligible, receive a share of
+          ads revenue.
+        </p>
+        <button>Subscribe</button>
+      </div>
+      <Trend />
     </section>
   );
 };

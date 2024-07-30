@@ -1,5 +1,7 @@
 .main-container {
   display: flex;
+  /* position: relative; */
+  margin-left: 19.5rem;;
 }
 
 .timeline-mode-container {
@@ -8,7 +10,7 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   text-align: center;
-  border: 0.1px solid var(--color-border);
+  border: 0.1px solid var(--color-gray);
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -18,7 +20,7 @@
   height: 6rem;
   padding: 1rem 1rem .5rem 1rem;
   gap: .2rem;
-  border: 0.1px solid var(--color-border);
+  border: 0.1px solid var(--color-gray);
 }
 
 .timeline-create-post {
@@ -31,7 +33,6 @@
   width: 95%;
   height: 100%;
   margin: 0.5rem;
-  font-family: Helvetica;
   font-size: 1.2rem;
   color: var(--color-3);
   resize: none;
@@ -40,7 +41,7 @@
 
 .timeline-create-post textarea::placeholder {
   font-size: 1.2rem;
-  font-family: Helvetica;
+  font-family: 'Inter';
 }
 
 .timeline-create-post textarea:focus {
