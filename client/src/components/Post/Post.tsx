@@ -9,7 +9,7 @@ const Post = () => {
     <div className="post">
       <ProfilePicture
         profilePicture={profilePicture}
-        width="3rem"
+        width="2.5rem"
         text="Profile"
       />
       <div className="post-profile">

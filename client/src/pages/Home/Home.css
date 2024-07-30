@@ -16,3 +16,8 @@
 .explore-container {
   width: 40%;
 }
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+}

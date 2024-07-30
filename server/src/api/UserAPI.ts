@@ -1,19 +1,29 @@
-import express, {Request, Response} from "express";
+import express, { Request, Response } from "express";
 import UserModel from "../models/User";
 
-export const createUser = (app: express.Application) => {
-  app.post("/createUser", async (req: Request, res: Response) => {
+const router = express.Router();
+
+router.post("/createUser", async (req: Request, res: Response) => {
+  try {
     const user = req.body;
     const newUser = new UserModel(user);
-    await newUser.save();
+    const savedUser = newUser.save();
+    res.status(200).send(savedUser);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
 
-    res.json(user);
-  });
-};
+router.get("/getUser", async (req: Request, res: Response) => {
+  try {
+    const users = await UserModel.find({});
+    if (users.length === 0) {
+      return res.status(404).send("No records found for the user.");
+    }
+    res.status(200).send(users);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
 
-export const getUser = (app: express.Application, query: {}) => {
-    app.get("/getUser", async (req: Request, res: Response) => {
-        let result = await UserModel.find(query);
-        res.status(200).json(result);
-      });
-};
+export default router;
