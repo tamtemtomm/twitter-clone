@@ -2,6 +2,7 @@ import "./Explore.css";
 import Icon from "../../components/Icon";
 import Trend from "../../components/Trend/Trend";
 import SearchIcon from "../../assets/svg/magnifying-glass-solid.svg";
+import { trendList } from "../../components/Trend/TrendList";
 
 const Explore = () => {
   return (
@@ -23,7 +24,12 @@ const Explore = () => {
         </p>
         <button>Subscribe</button>
       </div>
-      <Trend />
+      <div className="trend-container">
+        <h1>Trends For You</h1>
+        {trendList?.map((trend) => (
+          <Trend {...trend} />
+        ))}
+      </div>
     </section>
   );
 };

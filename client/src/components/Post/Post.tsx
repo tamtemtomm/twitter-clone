@@ -4,7 +4,16 @@ import "./Post.css";
 import ProfilePicture from "../ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
 
-const Post = () => {
+
+export interface PostInterface {
+  userId: number;
+  username: string;
+  userTag: string;
+  postTime: string;
+  tweet: string;
+}
+
+const Post = (props: PostInterface) => {
   return (
     <div className="post">
       <ProfilePicture
@@ -14,14 +23,12 @@ const Post = () => {
       />
       <div className="post-profile">
         <div className="post-profile-account">
-          <b>#99</b>
-          <p>@PartaiSocmed · 15h</p>
+          <b>{props.username}</b>
+          <p>
+            @{props.userTag} · {props.postTime}
+          </p>
         </div>
-        <p className="post-tweet">
-          Avkor bodoh sejak berbentuk ovum. 
-          <br></br><br></br>Pernyataan orang Koreanya secara
-          tidak sadar dibenarkan oleh mbak2 ini meski niatnya membantah.
-        </p>
+        <p className="post-tweet">{props.tweet}</p>
       </div>
     </div>
   );

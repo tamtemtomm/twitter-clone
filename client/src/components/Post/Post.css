@@ -1,28 +1,29 @@
-.post{
-    display: flex;
-    flex-direction: row;
-    gap: .7rem;
-    padding: 1rem 1rem .5rem 1rem;
-    font-size: 1rem;
+.post {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+  font-size: 0.95rem;
 }
 
-.post-profile{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    line-height: 1.4rem;
+.post-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  line-height: 1.4rem;
 }
 
-.post-profile-account{
-    display: flex;
-    gap: .3rem;
+.post-profile-account {
+  display: flex;
+  gap: 0.3rem;
 }
 
-.post-profile-account p{
-    color : var(--color-grey)
+.post-profile-account p {
+  color: var(--color-border);
+  font-weight: 500;
 }
 
-.post-tweet{
-    font-size: .9rem;
+.post-tweet {
+  font-weight: 400;
 }

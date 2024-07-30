@@ -1,22 +1,22 @@
-import "./../App.css"
+import "./../App.css";
 
-export interface IconType{
-    element: string,
-    width: string,
-    text: string,
-    scale: string,
+export interface IconType {
+  element: string;
+  width: string;
+  text: string;
+  scale: string;
 }
 
 const Icon = (props: IconType) => {
   return (
-    <div className='svg-container hover-click' style={{width: props.width}}>
-        <img
-          src={props.element}
-          alt={props.text}
-          style={{ scale: props.scale, float: "left"}}
-        />
+    <div className="svg-container hover-click" style={{ width: props.width }}>
+      <img
+        src={props.element}
+        alt={props.text}
+        style={{ scale: props.scale, float: "left" }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Icon
+export default Icon;

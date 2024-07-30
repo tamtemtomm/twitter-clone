@@ -42,6 +42,7 @@
 }
 
 .subscribe-container button {
+  margin-top: 0.5rem;
   color: white;
   padding: 0.6rem 0;
   font-size: 0.95rem;
