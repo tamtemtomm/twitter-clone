@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root{
   --color-1: #000000;
   --color-2: #1d9bf0;
   --color-3: #ffffff;
   --color-border:#504d4d;
-  --color-grey: rgb(92, 80, 80)
+  --color-gray: #202327;
+  --color-gray-text: #71767B;
 }
 
 html{
   background-color: var(--color-1);
-  font-family: Arial, Helvetica;
+  font-family: 'inter';
   color: var(--color-3)
 }
 

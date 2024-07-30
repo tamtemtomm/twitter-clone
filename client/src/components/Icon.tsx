@@ -1,7 +1,7 @@
 import React from 'react'
 import "./../App.css"
 
-interface IconType{
+export interface IconType{
     element: string,
     width: string,
     text: string,

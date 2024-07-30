@@ -2,7 +2,7 @@ import React from "react";
 import "./Timeline.css";
 
 import Post from "../../components/Post/Post";
-import CreatePost from "./CreatePost";
+import CreatePost from "../../components/CreatePost/CreatePost";
 
 const Timeline = () => {
   return (
@@ -11,7 +11,6 @@ const Timeline = () => {
         <div className="timeline-for-you hover-click">For you</div>
         <div className="timeline-following hover-click">Following</div>
       </div>
-
       <CreatePost />
 
       <div className="post-container">
