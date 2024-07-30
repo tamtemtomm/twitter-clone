@@ -8,6 +8,8 @@ import { dbUsername, dbPassword, dbName } from "./config/db-config";
 import UserModel from "./models/User";
 import { createUser, getUser } from "./api/UserAPI";
 import { getTweet } from "./api/TweetAPI";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 // Initialize express app
 const app: express.Application = express();
@@ -16,7 +18,7 @@ app.use(cors());
 
 // Connect to mongo db
 mongoose.connect(
-  `mongodb+srv://${dbUsername}:${dbPassword}@cluster0.8hzfnhm.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`
+  `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}.ibmusbt.mongodb.net/`
 );
 
 getUser(app, {});
