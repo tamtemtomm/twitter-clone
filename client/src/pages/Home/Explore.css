@@ -64,31 +64,20 @@
   gap: 1.5rem;
 }
 
-.trend-container h1 {
+.follow-recommendation-container {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  /* height: 8rem; */
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-gray);
+  gap: 1rem;
+}
+
+.follow-recommendation-container h1 {
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;
-}
-
-.trend-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.trend-list h4 {
-  font-weight: 400;
-  font-size: small;
-  color: var(--color-gray-text);
-}
-
-.trend-list h3 {
-  font-weight: 600;
-  font-size: medium;
-}
-
-.trend-list p {
-  font-weight: 400;
-  font-size: small;
-  color: var(--color-gray-text);
 }

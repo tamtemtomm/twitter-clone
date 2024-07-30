@@ -1,0 +1,29 @@
+.account-box {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  height: 3rem;
+}
+
+.account-box-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.account-box h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.account-box h4 {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: var(--color-gray-text);
+}
+
+.account-box button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}

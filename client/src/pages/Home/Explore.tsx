@@ -2,7 +2,9 @@ import "./Explore.css";
 import Icon from "../../components/Icon";
 import Trend from "../../components/Trend/Trend";
 import SearchIcon from "../../assets/svg/magnifying-glass-solid.svg";
+import AccountBox from "../../components/AccountBox/AccountBox";
 import { trendList } from "../../components/Trend/TrendList";
+import { accountRecommendationList } from "../../components/AccountBox/AccountRecommendationList";
 
 const Explore = () => {
   return (
@@ -28,6 +30,12 @@ const Explore = () => {
         <h1>Trends For You</h1>
         {trendList?.map((trend) => (
           <Trend {...trend} />
+        ))}
+      </div>
+      <div className="follow-recommendation-container">
+        <h1>Recommendation</h1>
+        {accountRecommendationList?.map((account) => (
+          <AccountBox {...account} />
         ))}
       </div>
     </section>

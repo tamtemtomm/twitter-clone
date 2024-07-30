@@ -3,7 +3,7 @@ import "./Main.css";
 
 import Post from "../../components/Post/Post";
 import CreatePost from "../../components/CreatePost/CreatePost";
-import { postList } from "../../components/Post/Post";
+import { postList } from "../../components/Post/PostList";
 
 const Main = () => {
   return (
