@@ -13,7 +13,7 @@ const Icon = (props: IconType) => {
       <img
         src={props.element}
         alt={props.text}
-        style={{ scale: props.scale, float: "left" }}
+        style={{ scale: props.scale, float: "left", fill:"red"}}
       />
     </div>
   );

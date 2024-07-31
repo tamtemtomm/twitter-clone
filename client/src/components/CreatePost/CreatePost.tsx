@@ -1,7 +1,7 @@
 import Icon from "../../components/Icon";
 import ProfilePicture from "../../components/ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
-import mediaIcon from "../../assets/svg/photo-film-solid.svg";
+import mediaIcon from "../../assets/svg/search-media.svg";
 
 export const postFunctionList = [
   { element: mediaIcon, width: "2rem", text: "media", scale: ".6" },

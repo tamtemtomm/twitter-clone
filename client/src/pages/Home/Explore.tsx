@@ -1,10 +1,10 @@
 import "./Explore.css";
 import Icon from "../../components/Icon";
 import Trend from "../../components/Trend/Trend";
-import SearchIcon from "../../assets/svg/magnifying-glass-solid.svg";
-import AccountBox from "../../components/AccountBox/AccountBox";
+import SearchIcon from "../../assets/navbar/navbar-explore.svg";
+import AccountBox from "../../components/Account/AccountBox";
 import { trendList } from "../../components/Trend/TrendList";
-import { accountRecommendationList } from "../../components/AccountBox/AccountRecommendationList";
+import { accountRecommendationList } from "../../components/Account/AccountRecommendationList";
 
 const Explore = () => {
   return (

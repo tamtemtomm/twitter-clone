@@ -1,14 +1,9 @@
-import React from "react";
-import ProfilePicture from "../../components/ProfilePicture";
-import "./AccountBox.css"
+import "./AccountBox.css";
 
-interface AccountBoxProps{
-  username: string,
-  userTag: string,
-  profilePicture: string
-}
+import ProfilePicture from "../ProfilePicture";
+import { AccountProps } from "../../context/AccountContext";
 
-const AccountBox = (props: AccountBoxProps) => {
+const AccountBox = (props: AccountProps) => {
   return (
     <div className="follow-recommendation-list-container">
       <div className="account-box">

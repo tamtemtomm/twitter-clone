@@ -1,11 +1,11 @@
-import React from "react";
 import "./Navbar.css"
 
-import { NavbarMenu, menuList } from "./NavbarMenu";
+import { NavbarMenu} from "./NavbarMenu";
+import { NavbarMenuList } from "./NavbarMenuList";
 import ProfilePicture from "../ProfilePicture";
 import Icon from "../Icon";
 
-import otherIcon from "../../assets/svg/bars-solid.svg";
+import otherIcon from "../../assets/svg/more.svg";
 import profilePicture from "../../assets/account-profile-test.jpg";
 
 interface UserType {
@@ -15,7 +15,7 @@ interface UserType {
 const Navbar = (props: UserType) => {
   return (
     <main className="navbar-container">
-      {menuList?.map((menu) => (
+      {NavbarMenuList?.map((menu) => (
         <NavbarMenu element={menu.element} scale={menu.scale} text={menu.text} />
       ))}
       <button className="post-button hover-click">Post</button>
