@@ -7,11 +7,14 @@ const AccountBox = (props: AccountProps) => {
   return (
     <div className="follow-recommendation-list-container">
       <div className="account-box">
-        <ProfilePicture
-          profilePicture={props.profilePicture}
-          width="2.4rem"
-          text="profilePicture"
-        />
+        {props.profilePicture && (
+          <ProfilePicture
+            profilePicture={props.profilePicture}
+            width="2.4rem"
+            text="profilePicture"
+          />
+        )}
+
         <div className="account-box-text-container">
           <h3>{props.username}</h3>
           <h4>@{props.usertag}</h4>

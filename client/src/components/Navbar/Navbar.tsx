@@ -6,7 +6,6 @@ import { OtherIconComponent } from "../IconList";
 import XLogo from "../../assets/x-logo.png";
 
 import ProfilePicture from "../ProfilePicture";
-import profilePicture from "../../assets/account-profile-test.jpg";
 
 import { AccountProps } from "../../context/AccountContext";
 
@@ -23,7 +22,7 @@ const Navbar = (props: AccountProps) => {
       <button className="post-button hover-click">Post</button>
       <div className="navbar-profile-container">
         <ProfilePicture
-          profilePicture={profilePicture}
+          profilePicture={props.profilePicture}
           width="2.3rem"
           text="Profile"
         />
