@@ -16,6 +16,7 @@ import { ReactComponent as ImageIcon } from "../assets/image.svg";
 import { ReactComponent as PollIcon } from "../assets/poll.svg";
 import { ReactComponent as EmoticonIcon } from "../assets/emoticon.svg";
 import { ReactComponent as CalendarIcon } from "../assets/calendar.svg";
+import { ReactComponent as GoogleIcon } from "../assets/google.svg";
 
 export interface IconProps {
   color?: string;
@@ -336,6 +337,22 @@ export const CalendarIconComponent = (props: IconProps) => {
   return (
     <div className="icon-container" style={{ width: props.width }}>
       <CalendarIcon
+        fill={props.color}
+        style={{
+          width: props.width,
+          scale: props.scale,
+          fill: "left",
+          stroke: props.stroke,
+        }}
+      />
+    </div>
+  );
+};
+
+export const GoogleIconComponent = (props: IconProps) => {
+  return (
+    <div className="icon-container" style={{ width: props.width }}>
+      <GoogleIcon
         fill={props.color}
         style={{
           width: props.width,
