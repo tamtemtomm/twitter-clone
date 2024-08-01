@@ -1,15 +1,14 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-  userId: {
+  _id: {
     type: Number,
-    required: true,
   },
-  name: {
+  username: {
     type: String,
     required: true,
   },
-  tagName: {
+  userTag: {
     type: String,
     required: true,
   },

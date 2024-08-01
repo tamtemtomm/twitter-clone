@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
 const TweetSchema = new mongoose.Schema({
-  tweetId: {
-    type: Number,
-    required: true,
+  _id: {
+    type: String,
   },
   userId: {
     type: Number,
@@ -13,21 +12,31 @@ const TweetSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  like:[{
-    userId: String
-  }],
-  retweet:[{
-    userId:String,
-    tweetId: String
-  }],
-  comment:[{
-    userId: String,
-    tweetId: String
-  }],
-  view:[{
-    userId: String
-  }]
-
+  postTime: {
+    type: Date,
+  },
+  like: [
+    {
+      userId: String,
+    },
+  ],
+  retweet: [
+    {
+      userId: String,
+      tweetId: String,
+    },
+  ],
+  comment: [
+    {
+      userId: String,
+      tweetId: String,
+    },
+  ],
+  view: [
+    {
+      userId: String,
+    },
+  ],
 });
 
 const TweetModel = mongoose.model("tweets", TweetSchema);

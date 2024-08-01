@@ -1,4 +1,5 @@
 export interface PostInterface {
+    _id?: string,
     userId: number;
     username: string;
     usertag: string;

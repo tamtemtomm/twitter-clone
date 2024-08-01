@@ -1,5 +1,6 @@
-export interface AccountProps{
-    username: string,
-    usertag: string,
-    profilePicture: string
-  }
+export interface AccountProps {
+  _id?: string;
+  username: string;
+  usertag: string;
+  profilePicture: string;
+}
