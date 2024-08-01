@@ -3,17 +3,17 @@ import profilePicture from "../../assets/account-profile-test.jpg";
 export const accountRecommendationList = [
   {
     username: "Charlie",
-    userTag: "MoistCr1TiKaL",
+    usertag: "MoistCr1TiKaL",
     profilePicture: profilePicture,
   },
   {
     username: "The Smile",
-    userTag: "thesmiletheband",
+    usertag: "thesmiletheband",
     profilePicture: profilePicture,
   },
   {
     username: "Genshin Impact",
-    userTag: "GenshinImpact",
+    usertag: "GenshinImpact",
     profilePicture: profilePicture,
   },
 ];

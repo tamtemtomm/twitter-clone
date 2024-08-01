@@ -1,16 +1,13 @@
-import Icon from "../Icon";
-
 interface NavbarMenuProps {
-  scale: string;
-  element: string;
+  Icon: any;
   text: string;
 }
 
-export const NavbarMenu = (props: NavbarMenuProps) => {
+export const NavbarMenu = ({ Icon, ...props }: NavbarMenuProps) => {
   return (
     <div className="navbar-menu-container">
-      <Icon {...props} width="4rem" />
-      <h3 style={{fontWeight:"300", fontSize: "1.25rem"}}>{props.text}</h3>
+      <Icon color="white" width="1rem" scale="1.5" />
+      <h3 style={{ fontWeight: "600", fontSize: "1.25rem" }}>{props.text}</h3>
     </div>
   );
 };

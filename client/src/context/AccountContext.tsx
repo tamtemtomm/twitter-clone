@@ -1,5 +1,5 @@
 export interface AccountProps{
     username: string,
-    userTag: string,
+    usertag: string,
     profilePicture: string
   }

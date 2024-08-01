@@ -1,7 +1,7 @@
 import "./Explore.css";
 import Icon from "../../components/Icon";
 import Trend from "../../components/Trend/Trend";
-import SearchIcon from "../../assets/navbar/navbar-explore.svg";
+import SearchIcon from "../../assets/explore.svg";
 import AccountBox from "../../components/Account/AccountBox";
 import { trendList } from "../../components/Trend/TrendList";
 import { accountRecommendationList } from "../../components/Account/AccountRecommendationList";

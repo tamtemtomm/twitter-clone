@@ -1,22 +1,24 @@
-import "./Navbar.css"
+import "./Navbar.css";
 
-import { NavbarMenu} from "./NavbarMenu";
+import { NavbarMenu } from "./NavbarMenu";
 import { NavbarMenuList } from "./NavbarMenuList";
-import ProfilePicture from "../ProfilePicture";
-import Icon from "../Icon";
+import { OtherIconComponent } from "../IconList";
+import XLogo from "../../assets/x-logo.png";
 
-import otherIcon from "../../assets/svg/more.svg";
+import ProfilePicture from "../ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
 
-interface UserType {
-  user: any;
-}
+import { AccountProps } from "../../context/AccountContext";
 
-const Navbar = (props: UserType) => {
+const Navbar = (props: AccountProps) => {
   return (
     <main className="navbar-container">
+      <div className="x-logo-container" style={{width: "2rem", paddingLeft: "1rem"}}>
+        <img src={XLogo} alt="" style={{ objectFit: "contain", width: "100%" }} />
+      </div>
+
       {NavbarMenuList?.map((menu) => (
-        <NavbarMenu element={menu.element} scale={menu.scale} text={menu.text} />
+        <NavbarMenu Icon={menu.Icon} text={menu.text} />
       ))}
       <button className="post-button hover-click">Post</button>
       <div className="navbar-profile-container">
@@ -26,11 +28,13 @@ const Navbar = (props: UserType) => {
           text="Profile"
         />
         <div className="navbar-profile-text-container">
-          <h3 className="navbar-profile-username">{props.user.username}</h3>
-          <h3 className="navbar-profile-tag" style={{fontWeight: "200"}}>@{props.user.tag}</h3>
+          <h3 className="navbar-profile-username">{props.username}</h3>
+          <h3 className="navbar-profile-tag" style={{ fontWeight: "200" }}>
+            @{props.usertag}
+          </h3>
         </div>
 
-        <Icon element={otherIcon} width="2rem" scale=".7" text="other" />
+        <OtherIconComponent color="white" width="1.25rem" scale="1" />
       </div>
     </main>
   );

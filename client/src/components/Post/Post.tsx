@@ -4,12 +4,12 @@ import ProfilePicture from "../ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
 import Icon from "../Icon";
 
-import postCommentIcon from "../../assets/post/post-comment.svg";
-import postRetweetIcon from "../../assets/post/post-retweet.svg";
-import postLikeIcon from "../../assets/post/post-like.svg";
-import postViewIcon from "../../assets/post/post-view.svg";
-import postBookmarkIcon from "../../assets/post/post-bookmark.svg";
-import postUploadIcon from "../../assets/post/post-upload.svg";
+import postCommentIcon from "../../assets/comment.svg";
+import postRetweetIcon from "../../assets/retweet.svg";
+import postLikeIcon from "../../assets/like.svg";
+import postViewIcon from "../../assets/view.svg";
+import postBookmarkIcon from "../../assets/bookmark.svg";
+import postUploadIcon from "../../assets/upload.svg";
 
 import { PostInterface } from "../../context/PostContext";
 
@@ -25,7 +25,7 @@ const Post = (props: PostInterface) => {
         <div className="post-profile-account">
           <b>{props.username}</b>
           <p>
-            @{props.userTag} · {props.postTime}
+            @{props.usertag} · {props.postTime}
           </p>
         </div>
         <p className="post-tweet">{props.tweet}</p>

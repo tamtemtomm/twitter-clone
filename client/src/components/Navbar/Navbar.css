@@ -2,7 +2,7 @@
   height: 100vh;
   /* border: 0.1px solid var(--color-gray); */
   padding-left: 2.5rem;
-  padding-top: 0.1rem;
+  padding-top: 1rem;
   width: 20%;
   min-width: 14rem;
   display: flex;
@@ -13,16 +13,17 @@
 }
 
 .navbar-menu-container {
-  height: 3.1rem;
+  height: 3.5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   color: var(--color-3);
   font-size: 0.9rem;
-  font-weight: normal;
   align-items: center;
-  gap: 0.1rem;
+  padding-left: 1.5rem;
+  gap: 1.2rem;
 }
+
 
 .navbar-menu-container:hover {
   cursor: pointer;
@@ -35,7 +36,7 @@
   margin-left: 1rem;
   background-color: var(--color-2);
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: large;
   border-radius: 2rem;
 }
@@ -72,4 +73,8 @@
 
 .navbar-profile-tag {
   color: var(--color-grey);
+}
+
+.navbar-container svg{
+  fill: "red";
 }

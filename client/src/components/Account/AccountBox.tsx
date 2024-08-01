@@ -14,7 +14,7 @@ const AccountBox = (props: AccountProps) => {
         />
         <div className="account-box-text-container">
           <h3>{props.username}</h3>
-          <h4>@{props.userTag}</h4>
+          <h4>@{props.usertag}</h4>
         </div>
         <button>Follow</button>
       </div>

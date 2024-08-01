@@ -1,7 +1,11 @@
 export interface PostInterface {
     userId: number;
     username: string;
-    userTag: string;
+    usertag: string;
     postTime: string;
     tweet: string;
+    comment?: string[];
+    retweet?: string[];
+    like?: string[];
+    view?: string[];
   }
