@@ -1,15 +1,18 @@
-import Icon from "../../components/Icon";
 import ProfilePicture from "../../components/ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
-import mediaIcon from "../../assets/svg/search-media.svg";
+
+import { MediaIconComponent } from "../IconList";
+import { ImageIconComponent } from "../IconList";
+import { PollIconComponent } from "../IconList";
+import { EmoticonIconComponent } from "../IconList";
+import { CalendarIconComponent } from "../IconList";
 
 export const postFunctionList = [
-  { element: mediaIcon, width: "2rem", text: "media", scale: ".6" },
-  { element: mediaIcon, width: "2rem", text: "media", scale: ".6" },
-  { element: mediaIcon, width: "2rem", text: "media", scale: ".6" },
-  { element: mediaIcon, width: "2rem", text: "media", scale: ".6" },
-  { element: mediaIcon, width: "2rem", text: "media", scale: ".6" },
-  { element: mediaIcon, width: "2rem", text: "media", scale: ".6" },
+  { Icon: MediaIconComponent, width: "2rem", text: "media", scale: ".6" },
+  { Icon: ImageIconComponent, width: "2rem", text: "media", scale: ".6" },
+  { Icon: PollIconComponent, width: "2rem", text: "media", scale: ".6" },
+  { Icon: EmoticonIconComponent, width: "2rem", text: "media", scale: ".6" },
+  { Icon: CalendarIconComponent, width: "2rem", text: "media", scale: ".6" },
 ];
 
 const CreatePost = () => {
@@ -28,9 +31,18 @@ const CreatePost = () => {
           placeholder="What is happening?!"
         ></textarea>
         <div className="timeline-post-function-container">
-          <div className="timeline-post-function">
-            {postFunctionList.map((post) => (
-              <Icon {...post} />
+          <div
+            className="timeline-post-function"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "30%",
+              paddingLeft: ".8rem",
+            }}
+          >
+            {postFunctionList.map(({ Icon, ...post }) => (
+              <Icon color="#1d9bf0" width="1rem" scale="1" />
             ))}
           </div>
           <button className="hover-click">Post</button>

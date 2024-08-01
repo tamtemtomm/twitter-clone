@@ -2,14 +2,13 @@ import "./Post.css";
 
 import ProfilePicture from "../ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
-import Icon from "../Icon";
 
-import postCommentIcon from "../../assets/comment.svg";
-import postRetweetIcon from "../../assets/retweet.svg";
-import postLikeIcon from "../../assets/like.svg";
-import postViewIcon from "../../assets/view.svg";
-import postBookmarkIcon from "../../assets/bookmark.svg";
-import postUploadIcon from "../../assets/upload.svg";
+import { CommentIconComponent } from "../IconList";
+import { RetweetIconComponent } from "../IconList";
+import { LikeIconComponent } from "../IconList";
+import { ViewIconComponent } from "../IconList";
+import { BookmarkIconComponent } from "../IconList";
+import { UploadIconComponent } from "../IconList";
 
 import { PostInterface } from "../../context/PostContext";
 
@@ -31,57 +30,27 @@ const Post = (props: PostInterface) => {
         <p className="post-tweet">{props.tweet}</p>
         <div className="post-interaction-container">
           <div className="post-comment-container">
-            <Icon
-              element={postCommentIcon}
-              width="1rem"
-              text="post-comment"
-              scale="1"
-            />
+            <CommentIconComponent color="#71767b" width="1rem" />
             <p>11K</p>
           </div>
           <div className="post-retweet-container">
-            <Icon
-              element={postRetweetIcon}
-              width="1rem"
-              text="post-comment"
-              scale="1"
-            />
+            <RetweetIconComponent color="#71767b" width="1rem" />
             <p>11K</p>
           </div>
           <div className="post-like-container">
-            <Icon
-              element={postLikeIcon}
-              width="1rem"
-              text="post-comment"
-              scale="1"
-            />
+            <LikeIconComponent color="#71767b" width="1rem" />
             <p>11K</p>
           </div>
           <div className="post-view-container">
-            <Icon
-              element={postViewIcon}
-              width="1rem"
-              text="post-comment"
-              scale="1"
-            />
+            <ViewIconComponent color="#71767b" width="1rem" />
             <p>11K</p>
           </div>
           <div id="post-save-container">
             <>
-              <Icon
-                element={postBookmarkIcon}
-                width="1rem"
-                text="post-comment"
-                scale=".8"
-              />
+              <BookmarkIconComponent color="#71767b" width=".8rem" />
             </>
             <>
-              <Icon
-                element={postUploadIcon}
-                width="1rem"
-                text="post-comment"
-                scale=".8"
-              />
+              <UploadIconComponent color="#71767b" width=".8rem" />
             </>
           </div>
         </div>

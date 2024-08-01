@@ -14,12 +14,13 @@
   color: var(--color-gray-text);
   display: flex;
   margin: 0.5rem auto;
-  padding: 0;
+  padding-left: 1rem;
   align-items: center;
   width: 90%;
   height: 2.6rem;
   border-radius: 2rem;
   font-size: 1rem;
+  gap: .5rem;
 }
 
 .subscribe-container {

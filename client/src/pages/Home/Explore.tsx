@@ -1,8 +1,8 @@
 import "./Explore.css";
-import Icon from "../../components/Icon";
 import Trend from "../../components/Trend/Trend";
-import SearchIcon from "../../assets/explore.svg";
 import AccountBox from "../../components/Account/AccountBox";
+
+import { ExploreIconComponent } from "../../components/IconList";
 import { trendList } from "../../components/Trend/TrendList";
 import { accountRecommendationList } from "../../components/Account/AccountRecommendationList";
 
@@ -10,12 +10,7 @@ const Explore = () => {
   return (
     <section className="explore-container">
       <div className="search-bar">
-        <Icon
-          element={SearchIcon}
-          scale="0.35"
-          text="Home"
-          width="2.5rem"
-        ></Icon>
+        <ExploreIconComponent color="white" width=".9rem" />
         Search
       </div>
       <div className="subscribe-container">
