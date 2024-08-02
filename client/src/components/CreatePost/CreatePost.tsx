@@ -1,10 +1,17 @@
-import { auth } from "../../firebase";
+//Import Style
 import ProfilePicture from "../../components/ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
-import { PostFunctionIconList } from "./PostFunctionList";
+
+// Import Dependencies
 import { useState } from "react";
 import randomstring from "randomstring";
-import { addTweetRoute } from "../../routes/TweetRoute";
+import { auth } from "../../firebase";
+
+// Import Components
+import { PostFunctionIconList } from "./PostFunctionList";
+
+// Import Tweet Route and Utilities
+import { addTweetRoute } from "../../api/TweetAPI";
 import { TweetInterface } from "../../Interface/TweetInterface";
 
 const CreatePost = () => {

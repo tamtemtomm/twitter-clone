@@ -1,9 +1,10 @@
+// Import Style
 import "./Timeline.css";
 
+// Import Components
 import Post from "../../components/Post/Post";
 import { postList } from "../../components/Post/PostList";
 import CreatePost from "../../components/CreatePost/CreatePost";
-
 
 const Timeline = () => {
   return (

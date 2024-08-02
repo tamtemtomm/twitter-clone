@@ -1,9 +1,10 @@
 import axios from "axios";
+import { PORT } from "../utilities/Variables";
 import { AccountInterface } from "../Interface/AccountInterface";
 
 export const addAccountRoute = async (newAccount: AccountInterface) => {
   axios
-    .post("http://localhost:3001/user-records/createUser", newAccount)
+    .post(`${PORT}/user-records/createUser`, newAccount)
     .then(function (response) {
       console.log(response);
     })
@@ -12,13 +13,12 @@ export const addAccountRoute = async (newAccount: AccountInterface) => {
     });
 };
 
-
 export const getAccountRoute =  (
   _id: string,
   setAccount: (accounts: any) => void
 ) => {
   axios
-    .get(`http://localhost:3001/user-records/getUser/${_id}`)
+    .get(`${PORT}/user-records/getUser/${_id}`)
     .then((res) => {
       console.log(res);
       setAccount(res.data);

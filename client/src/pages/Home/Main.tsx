@@ -1,14 +1,14 @@
-import Explore from "./Explore";
+//Import Style
 import "./Main.css";
 
+//Import Essential Components
+import Explore from "./Explore";
 import Post from "../../components/Post/Post";
 import CreatePost from "../../components/CreatePost/CreatePost";
 import { postList } from "../../components/Post/PostList";
+
+//Import Tweet Interface
 import { TweetInterface } from "../../Interface/TweetInterface";
-import { PostInterface } from "../../Interface/PostInterface";
-import { getAccountRoute } from "../../routes/AccountRoute";
-import { useEffect, useState } from "react";
-import { AccountInterface } from "../../Interface/AccountInterface";
 
 interface MainInterface {
   tweets: TweetInterface[];

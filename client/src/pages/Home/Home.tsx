@@ -1,28 +1,33 @@
-import { useEffect, useState } from "react";
+// Import Style
 import "./Home.css";
+import defaultProfilePicture from "../../assets/account-profile-test.jpg";
+
+// Import Dependencies
+import { useEffect, useState } from "react";
+import { auth } from "../../firebase";
 
 // Import Essential Component
 import Navbar from "../../components/Navbar/Navbar";
 import Main from "./Main";
-
-// Impoot tools
-import defaultProfilePicture from "../../assets/account-profile-test.jpg";
-import { auth } from "../../firebase";
-import { getTweetAllRoute } from "../../routes/TweetRoute";
+ 
+// Import Tweet Route and Interface
+import { getTweetAllRoute } from "../../api/TweetAPI";
 import { TweetInterface } from "../../Interface/TweetInterface";
 
-interface HomeProps {
+export interface HomeProps {
   isAuth: boolean;
 }
 
 export const Home = ({ isAuth }: HomeProps) => {
   const [tweets, setTweets] = useState<TweetInterface[]>([]);
-
+  
+  // Get All Tweets
   useEffect(() => {
     getTweetAllRoute(setTweets)
     console.log(tweets) 
   }, [])
 
+  // Get Auth data from firebase all localstoraage
   const userAttribute = {
     _id: auth.currentUser?.uid,
     username: localStorage.getItem("twitter-clone-auth-username") || "username",
@@ -33,6 +38,7 @@ export const Home = ({ isAuth }: HomeProps) => {
       localStorage.getItem("twitter-clone-auth-photoURL") ||
       defaultProfilePicture,
   };
+
   return (
     <div className="home-container">
       <Navbar {...userAttribute} />

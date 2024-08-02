@@ -1,8 +1,12 @@
+// Import Style
 import "./Explore.css";
+
+//Import Components
 import Trend from "../../components/Trend/Trend";
 import AccountBox from "../../components/Account/AccountBox";
-
 import { ExploreIconComponent } from "../../components/IconList";
+
+// Import Sinthetic Data
 import { trendList } from "../../components/Trend/TrendList";
 import { accountRecommendationList } from "../../components/Account/AccountRecommendationList";
 
@@ -21,18 +25,21 @@ const Explore = () => {
         </p>
         <button>Subscribe</button>
       </div>
+      
       <div className="trend-container">
         <h1>Trends For You</h1>
         {trendList?.map((trend, index) => (
-          <Trend {...trend} key={index}/>
+          <Trend {...trend} key={index} />
         ))}
       </div>
+
       <div className="follow-recommendation-container">
         <h1>Recommendation</h1>
         {accountRecommendationList?.map((account, index) => (
-          <AccountBox {...account} key={index}/>
+          <AccountBox {...account} key={index} />
         ))}
       </div>
+      
     </section>
   );
 };

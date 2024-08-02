@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+// Import Style
+import "./App.css";
 
+// Import Dependencies
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Import Components
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
-import "./App.css";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);

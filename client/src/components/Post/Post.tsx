@@ -1,8 +1,9 @@
+// Import Style
 import "./Post.css";
-
 import ProfilePicture from "../ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
 
+// Import Icons
 import { CommentIconComponent } from "../IconList";
 import { RetweetIconComponent } from "../IconList";
 import { LikeIconComponent } from "../IconList";

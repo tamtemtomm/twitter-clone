@@ -1,4 +1,3 @@
-import React from "react";
 import "./Trend.css"
 
 interface TrendMenuProps {
