@@ -5,6 +5,7 @@ import Main from "./Main";
 import defaultProfilePicture from "../../assets/account-profile-test.jpg";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 interface HomeProps {
   isAuth: boolean;
@@ -12,18 +13,21 @@ interface HomeProps {
 
 export const Home = ({ isAuth }: HomeProps) => {
   const navigate = useNavigate();
-  if (localStorage.getItem("twitter-clone-isAuth") === null) {
-    navigate("/auth");
-  }
-
+  useEffect(() => {
+    if (localStorage.getItem("twitter-clone-isAuth") !== "true") {
+      navigate("/auth");
+    }
+  });
   const userAttribute = {
     _id: auth.currentUser?.uid,
-    username: auth.currentUser?.displayName || "username",
-    usertag: "widyanvolta",
-    email: auth.currentUser?.email || "email@gmail.com",
-    profilePicture: auth.currentUser?.photoURL || defaultProfilePicture,
+    username: localStorage.getItem("twitter-clone-auth-username") || "username",
+    usertag: localStorage.getItem("twitter-clone-auth-usertag") || "usertag",
+    email:
+      localStorage.getItem("twitter-clone-auth-email") || "email@gmail.com",
+    profilePicture:
+      localStorage.getItem("twitter-clone-auth-photoURL") ||
+      defaultProfilePicture,
   };
-
   return (
     <div className="home-container">
       <Navbar {...userAttribute} />
