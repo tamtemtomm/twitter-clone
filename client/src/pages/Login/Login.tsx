@@ -7,7 +7,7 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
 
 // Import Props Context and Routes
-import { AccountProps } from "../../context/AccountContext";
+import { AccountInterface } from "../../Interface/AccountInterface";
 import { addAccountRoute } from "../../routes/AccountRoute";
 
 // Import Icon and Styling
@@ -42,7 +42,7 @@ const Login = ({ setIsAuth }: any) => {
         result.user.photoURL || ""
       );
 
-      const newRecord: AccountProps = {
+      const newRecord: AccountInterface = {
         _id: result.user.uid || "randomuid823i4ydsfmh",
         username: result.user.displayName || "defaultusername",
         usertag: result.user.displayName || "defaulttag",

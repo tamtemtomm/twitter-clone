@@ -20,3 +20,15 @@ export const addTweetRoute = async (record: any) => {
     console.log(err);
   }
 };
+
+export const getTweetAllRoute = async() => {
+  const response = await fetch("http://localhost:3001/tweet-records/getTweet")
+
+  if (response.ok){
+    const records = await response.json()
+    return records
+  } 
+  else {
+    console.log("No records found in db")
+  }
+}

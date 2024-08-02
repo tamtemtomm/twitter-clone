@@ -13,7 +13,7 @@
 }
 
 .navbar-menu-container {
-  height: 3.5rem;
+  height: 3.2rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -43,7 +43,7 @@
 
 .navbar-profile-container {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 2.6rem;
   display: flex;
   height: 2.4rem;
   align-items: center;
@@ -68,6 +68,7 @@
   flex-direction: column;
   gap: 0.3rem;
   font-weight: 300;
+  margin-right: 2.8rem
   /* font-size: larger; */
 }
 
@@ -75,6 +76,3 @@
   color: var(--color-grey);
 }
 
-.navbar-container svg{
-  fill: "red";
-}

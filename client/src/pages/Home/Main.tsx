@@ -14,13 +14,15 @@ const Main = () => {
           <div className="timeline-following hover-click">Following</div>
         </div>
 
-        {localStorage.getItem("twitter-clone-isAuth") === "true" && (
+        {/* {localStorage.getItem("twitter-clone-isAuth") === "true" && (
           <CreatePost />
-        )}
+        )} */}
+
+        <CreatePost/>
 
         <div className="post-container">
           {postList?.map((post) => (
-            <Post {...post} />
+            <Post {...post} key={post.userId}/>
           ))}
         </div>
       </section>

@@ -10,7 +10,7 @@ import { ViewIconComponent } from "../IconList";
 import { BookmarkIconComponent } from "../IconList";
 import { UploadIconComponent } from "../IconList";
 
-import { PostInterface } from "../../context/PostContext";
+import { PostInterface } from "../../Interface/PostInterface";
 
 const Post = (props: PostInterface) => {
   return (

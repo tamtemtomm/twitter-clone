@@ -1,6 +1,6 @@
-import { AccountProps } from "../context/AccountContext";
+import { AccountInterface } from "../Interface/AccountInterface";
 
-export const addAccountRoute = async (record: AccountProps) => {
+export const addAccountRoute = async (record: AccountInterface) => {
   const response = await fetch(
     "http://localhost:3001/user-records/createUser",
     {
@@ -20,5 +20,18 @@ export const addAccountRoute = async (record: AccountProps) => {
     }
   } catch (err) {
     console.log(err);
+  }
+};
+
+export const getAccountRoute = async (_id?: string) => {
+  const response = await fetch(
+    `http://localhost:3001/user-records/getUser/${_id}`
+  );
+
+  if (response.ok){
+    const records = await response.json()
+    return records
+  } else {
+    console.log('No user found on this id')
   }
 };

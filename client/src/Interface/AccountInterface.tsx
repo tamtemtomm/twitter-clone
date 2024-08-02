@@ -1,4 +1,4 @@
-export interface AccountProps {
+export interface AccountInterface {
   _id?: string;
   username: string;
   usertag: string;

@@ -26,4 +26,17 @@ router.get("/getUser", async (req: Request, res: Response) => {
   }
 });
 
+router.get("/getUser/:_id", async (req: Request, res: Response) => {
+  try {
+    const _id = req.params._id
+    const users = await UserModel.find({_id:_id});
+    if (users.length === 0) {
+      return res.status(404).send("No records found for the user.");
+    }
+    res.status(200).send(users);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
 export default router;

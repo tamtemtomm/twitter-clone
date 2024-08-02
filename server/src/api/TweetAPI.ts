@@ -26,12 +26,12 @@ router.get("/getTweet", async (req: Request, res: Response) => {
   }
 });
 
-router.get("/getTweet/byUser/:userId", async (req: Request, res: Response) => {
+router.get("/getTweet/:_id", async (req: Request, res: Response) => {
   try {
-    const userId = req.params.userId;
-    const records = await TweetModel.find({ userId: userId });
+    const _id = req.params._id;
+    const records = await TweetModel.find({ _id: _id });
     if (records.length === 0) {
-      return res.status(404).send("No records found for the user.");
+      return res.status(404).send("No tweet Found on this _id.");
     }
     res.status(200).send(records);
   } catch (err) {
@@ -39,10 +39,10 @@ router.get("/getTweet/byUser/:userId", async (req: Request, res: Response) => {
   }
 });
 
-router.get("/getTweet/byTweet/:tweetId", async (req: Request, res: Response) => {
+router.get("/getTweet/userId/:userId", async (req: Request, res: Response) => {
   try {
-    const tweetId = req.params.tweetId;
-    const records = await TweetModel.find({ tweetId: tweetId });
+    const userId = req.params.userId;
+    const records = await TweetModel.find({ userId: userId });
     if (records.length === 0) {
       return res.status(404).send("No records found for the user.");
     }

@@ -1,6 +1,6 @@
 export interface PostInterface {
     _id?: string,
-    userId: number;
+    userId: string;
     username: string;
     usertag: string;
     tweet: string;

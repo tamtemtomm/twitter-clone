@@ -7,12 +7,12 @@ import XLogo from "../../assets/x-logo.png";
 
 import ProfilePicture from "../ProfilePicture";
 
-import { AccountProps } from "../../context/AccountContext";
+import { AccountInterface } from "../../Interface/AccountInterface";
 
-const Navbar = (props: AccountProps) => {
+const Navbar = (props: AccountInterface) => {
   return (
     <main className="navbar-container">
-      <div className="x-logo-container" style={{width: "2rem", paddingLeft: "1rem"}}>
+      <div className="x-logo-container" style={{width: "1.6rem", paddingLeft: "1.2rem"}}>
         <img src={XLogo} alt="" style={{ objectFit: "contain", width: "100%" }} />
       </div>
 
@@ -33,7 +33,7 @@ const Navbar = (props: AccountProps) => {
           </h3>
         </div>
 
-        <OtherIconComponent color="white" width="1.25rem" scale="1" />
+        <OtherIconComponent color="white" width="1rem" scale="1" />
       </div>
     </main>
   );
