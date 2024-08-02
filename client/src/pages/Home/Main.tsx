@@ -4,8 +4,17 @@ import "./Main.css";
 import Post from "../../components/Post/Post";
 import CreatePost from "../../components/CreatePost/CreatePost";
 import { postList } from "../../components/Post/PostList";
+import { TweetInterface } from "../../Interface/TweetInterface";
+import { PostInterface } from "../../Interface/PostInterface";
+import { getAccountRoute } from "../../routes/AccountRoute";
+import { useEffect, useState } from "react";
+import { AccountInterface } from "../../Interface/AccountInterface";
 
-const Main = () => {
+interface MainInterface {
+  tweets: TweetInterface[];
+}
+
+const Main = ({ tweets }: MainInterface) => {
   return (
     <main className="main-container">
       <section className="timeline-container">
@@ -18,11 +27,11 @@ const Main = () => {
           <CreatePost />
         )} */}
 
-        <CreatePost/>
+        <CreatePost />
 
         <div className="post-container">
           {postList?.map((post) => (
-            <Post {...post} key={post.userId}/>
+            <Post {...post} key={post.userId} />
           ))}
         </div>
       </section>

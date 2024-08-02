@@ -15,13 +15,13 @@ export const addAccountRoute = async (newAccount: AccountInterface) => {
 
 export const getAccountRoute =  (
   _id: string,
-  setState: (accounts: any) => void
+  setAccount: (accounts: any) => void
 ) => {
   axios
     .get(`http://localhost:3001/user-records/getUser/${_id}`)
     .then((res) => {
       console.log(res);
-      setState(res.data[0]);
+      setAccount(res.data);
     })
     .catch((err) => {
       console.log(err);

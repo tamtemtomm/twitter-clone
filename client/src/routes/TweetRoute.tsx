@@ -12,13 +12,12 @@ export const addTweetRoute = (newTweet: TweetInterface) => {
     });
 };
 
-export const getTweetAllRoute = (setState: (Tweets: any) => void) => {
+export const getTweetAllRoute = (setState: (tweets: any) => void) => {
   axios
     .get("http://localhost:3001/tweet-records/getTweet")
     .then((res) => {
-      console.log(res);
-      setState(res);
-    })
+      setState(res.data);
+    }) 
     .catch((err) => {
       console.log(err);
     });
