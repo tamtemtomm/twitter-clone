@@ -5,15 +5,16 @@ import { PostFunctionIconList } from "./PostFunctionList";
 import { useState } from "react";
 import randomstring from "randomstring";
 import { addTweetRoute } from "../../routes/TweetRoute";
+import { TweetInterface } from "../../Interface/TweetInterface";
 
 const CreatePost = () => {
   const [tweet, setTweet] = useState("");
 
   const handleSubmitTweet = () => {
-    const newRecord = {
+    const newRecord : TweetInterface= {
       _id: randomstring.generate(28),
       userId:
-        auth.currentUser?.uid || localStorage.getItem("twitter-clone-auth-uid"),
+        auth.currentUser?.uid || localStorage.getItem("twitter-clone-auth-uid") || "",
       tweet: tweet,
       postTime: new Date(),
     };
@@ -36,7 +37,7 @@ const CreatePost = () => {
           placeholder="What is happening?!"
           onChange={(e) => {
             setTweet(e.target.value);
-            console.log("Haha");
+            // console.log("Haha");
           }}
         ></textarea>
         <form
@@ -53,8 +54,8 @@ const CreatePost = () => {
               paddingLeft: ".8rem",
             }}
           >
-            {PostFunctionIconList.map((Icon) => (
-              <Icon color="#1d9bf0" width="1rem" scale="1" />
+            {PostFunctionIconList.map((Icon, index) => (
+              <Icon color="#1d9bf0" width="1rem" scale="1" key={index}/>
             ))}
           </div>
           <button type="submit" className="hover-click">

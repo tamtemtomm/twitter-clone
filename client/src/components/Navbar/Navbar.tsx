@@ -16,8 +16,8 @@ const Navbar = (props: AccountInterface) => {
         <img src={XLogo} alt="" style={{ objectFit: "contain", width: "100%" }} />
       </div>
 
-      {NavbarMenuList?.map((menu) => (
-        <NavbarMenu Icon={menu.Icon} text={menu.text} />
+      {NavbarMenuList?.map((menu, index) => (
+        <NavbarMenu Icon={menu.Icon} text={menu.text} key={index}/>
       ))}
       <button className="post-button hover-click">Post</button>
       <div className="navbar-profile-container">

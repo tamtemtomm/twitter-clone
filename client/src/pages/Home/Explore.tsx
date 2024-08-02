@@ -23,14 +23,14 @@ const Explore = () => {
       </div>
       <div className="trend-container">
         <h1>Trends For You</h1>
-        {trendList?.map((trend) => (
-          <Trend {...trend} />
+        {trendList?.map((trend, index) => (
+          <Trend {...trend} key={index}/>
         ))}
       </div>
       <div className="follow-recommendation-container">
         <h1>Recommendation</h1>
-        {accountRecommendationList?.map((account) => (
-          <AccountBox {...account} />
+        {accountRecommendationList?.map((account, index) => (
+          <AccountBox {...account} key={index}/>
         ))}
       </div>
     </section>
