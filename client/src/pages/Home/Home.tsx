@@ -4,20 +4,20 @@ import Navbar from "../../components/Navbar/Navbar";
 import Main from "./Main";
 import defaultProfilePicture from "../../assets/account-profile-test.jpg";
 import { auth } from "../../firebase";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { useEffect } from "react";
 
 interface HomeProps {
   isAuth: boolean;
 }
 
 export const Home = ({ isAuth }: HomeProps) => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (localStorage.getItem("twitter-clone-isAuth") !== "true") {
-      navigate("/auth");
-    }
-  });
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   if (localStorage.getItem("twitter-clone-isAuth") !== "true") {
+  //     navigate("/auth");
+  //   }
+  // });
   const userAttribute = {
     _id: auth.currentUser?.uid,
     username: localStorage.getItem("twitter-clone-auth-username") || "username",
