@@ -3,12 +3,13 @@ import mongoose from "mongoose";
 const TweetSchema = new mongoose.Schema({
   _id: {
     type: String,
-  },
-  userId: {
-    type: Number,
     required: true,
   },
-  text: {
+  userId: {
+    type: String,
+    required: true,
+  },
+  tweet: {
     type: String,
     required: true,
   },

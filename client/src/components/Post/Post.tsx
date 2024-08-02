@@ -24,7 +24,12 @@ const Post = (props: PostInterface) => {
         <div className="post-profile-account">
           <b>{props.username}</b>
           <p>
-            @{props.usertag} · {props.postTime}
+            @{props.usertag} ·{" "}
+            {String(props.postTime?.getDay()) +
+              "-" +
+              String(props.postTime?.getMonth()) +
+              "-" +
+              String(props.postTime?.getFullYear())}
           </p>
         </div>
         <p className="post-tweet">{props.tweet}</p>

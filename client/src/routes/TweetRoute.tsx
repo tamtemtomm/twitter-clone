@@ -1,8 +1,6 @@
-import { AccountProps } from "../context/AccountContext";
-
-export const addAccountRoute = async (record: AccountProps) => {
+export const addTweetRoute = async (record: any) => {
   const response = await fetch(
-    "http://localhost:3001/user-records/createUser",
+    "http://localhost:3001/tweet-records/createTweet",
     {
       method: "POST",
       body: JSON.stringify(record),

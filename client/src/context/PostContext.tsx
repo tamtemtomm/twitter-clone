@@ -3,8 +3,8 @@ export interface PostInterface {
     userId: number;
     username: string;
     usertag: string;
-    postTime: string;
     tweet: string;
+    postTime?: Date; 
     comment?: string[];
     retweet?: string[];
     like?: string[];

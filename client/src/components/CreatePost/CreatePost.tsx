@@ -1,21 +1,25 @@
+import { auth } from "../../firebase";
 import ProfilePicture from "../../components/ProfilePicture";
 import profilePicture from "../../assets/account-profile-test.jpg";
-
-import { MediaIconComponent } from "../IconList";
-import { ImageIconComponent } from "../IconList";
-import { PollIconComponent } from "../IconList";
-import { EmoticonIconComponent } from "../IconList";
-import { CalendarIconComponent } from "../IconList";
-
-export const postFunctionList = [
-  { Icon: MediaIconComponent, width: "2rem", text: "media", scale: ".6" },
-  { Icon: ImageIconComponent, width: "2rem", text: "media", scale: ".6" },
-  { Icon: PollIconComponent, width: "2rem", text: "media", scale: ".6" },
-  { Icon: EmoticonIconComponent, width: "2rem", text: "media", scale: ".6" },
-  { Icon: CalendarIconComponent, width: "2rem", text: "media", scale: ".6" },
-];
+import { PostFunctionIconList } from "./PostFunctionList";
+import { useState } from "react";
+import randomstring from "randomstring";
+import { addTweetRoute } from "../../routes/TweetRoute";
 
 const CreatePost = () => {
+  const [tweet, setTweet] = useState("");
+
+  const handleSubmitTweet = () => {
+    const newRecord = {
+      _id: randomstring.generate(28),
+      userId:
+        auth.currentUser?.uid || localStorage.getItem("twitter-clone-auth-uid"),
+      tweet: tweet,
+      postTime: new Date(),
+    };
+    addTweetRoute(newRecord);
+  };
+
   return (
     <div className="timeline-create-post-container">
       <ProfilePicture
@@ -27,10 +31,18 @@ const CreatePost = () => {
         <textarea
           name=""
           id=""
+          value={tweet}
           className="timeline-post-text"
           placeholder="What is happening?!"
+          onChange={(e) => {
+            setTweet(e.target.value);
+            console.log("Haha");
+          }}
         ></textarea>
-        <div className="timeline-post-function-container">
+        <form
+          className="timeline-post-function-container"
+          onSubmit={handleSubmitTweet}
+        >
           <div
             className="timeline-post-function"
             style={{
@@ -41,12 +53,14 @@ const CreatePost = () => {
               paddingLeft: ".8rem",
             }}
           >
-            {postFunctionList.map(({ Icon, ...post }) => (
+            {PostFunctionIconList.map((Icon) => (
               <Icon color="#1d9bf0" width="1rem" scale="1" />
             ))}
           </div>
-          <button className="hover-click">Post</button>
-        </div>
+          <button type="submit" className="hover-click">
+            Post
+          </button>
+        </form>
       </div>
     </div>
   );
